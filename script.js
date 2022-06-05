@@ -14,15 +14,15 @@ let computerSelection = computerPlay();
 
 function singleRound(playerSelection, computerSelection)
 {
-    if (playerSelection == 1 && computerSelection == 'Scissors') return "Player wins - rock beats scissors";
-    else if (playerSelection == 1 && computerSelection == 'Paper') return "Player loses - paper beats rock";
-    else if (playerSelection == 1 && computerSelection == 'Rock') return "Draw";
-    else if (playerSelection == 2 && computerSelection == 'Rock') return "Player wins - paper beats rock";
-    else if (playerSelection == 2 && computerSelection == 'Scissors') return "Player loses - scissors beat paper";
-    else if (playerSelection == 2 && computerSelection == 'Paper') return "Draw";
-    else if (playerSelection == 3 && computerSelection == 'Scissors') return "Draw";
-    else if (playerSelection == 3 && computerSelection == 'Rock') return "Player loses - scissors beat rock";
-    else if (playerSelection == 3 && computerSelection == 'Paper') return "Player wins - scissors beat paper";
+    if (playerSelection == 1 && computerSelection == 'Scissors') return "Computer selected scissors\nPlayer wins - rock beats scissors";
+    else if (playerSelection == 1 && computerSelection == 'Paper') return "Computer selected Paper\nPlayer loses - paper beats rock";
+    else if (playerSelection == 1 && computerSelection == 'Rock') return "Computer selected rock\nDraw";
+    else if (playerSelection == 2 && computerSelection == 'Rock') return "Computer selected rock\nPlayer wins - paper beats rock";
+    else if (playerSelection == 2 && computerSelection == 'Scissors') return "Computer selected scissors\nPlayer loses - scissors beat paper";
+    else if (playerSelection == 2 && computerSelection == 'Paper') return "Computer selected paper\nDraw";
+    else if (playerSelection == 3 && computerSelection == 'Scissors') return "Computer selected scissors\nDraw";
+    else if (playerSelection == 3 && computerSelection == 'Rock') return "Computer selected rock\nPlayer loses - scissors beat rock";
+    else if (playerSelection == 3 && computerSelection == 'Paper') return "Computer selected paper\nPlayer wins - scissors beat paper";
     else return "error";
 }
 
