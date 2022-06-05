@@ -9,8 +9,8 @@ function computerPlay()
     return choice[randomIndex];
 }
 
-let playerSelection = prompt("Make a choice:\n1. Rock\n2. Paper\n3.Scissors");
-let computerSelection = computerPlay();
+let playerSelection;
+let computerSelection;
 
 function singleRound(playerSelection, computerSelection)
 {
@@ -30,8 +30,10 @@ function game(playerSelection, computerSelection)
 {
     for(let i = 0; i < 5; i++)
     {
-        singleRound(playerSelection, computerSelection);
+        playerSelection = prompt("Make a choice:\n1. Rock\n2. Paper\n3.Scissors");
+        computerSelection = computerPlay();
+        console.log(singleRound(playerSelection, computerSelection));
     }
 }
 
-game();
+game(playerSelection, computerSelection);
