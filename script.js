@@ -25,15 +25,3 @@ function singleRound(playerSelection, computerSelection)
     else if (playerSelection == 3 && computerSelection == 'Paper') return "Computer selected paper\nPlayer wins - scissors beat paper";
     else return "error";
 }
-
-function game(playerSelection, computerSelection)
-{
-    for(let i = 0; i < 5; i++)
-    {
-        playerSelection = prompt("Make a choice:\n1. Rock\n2. Paper\n3.Scissors");
-        computerSelection = computerPlay();
-        console.log(singleRound(playerSelection, computerSelection));
-    }
-}
-
-game(playerSelection, computerSelection);
