@@ -12,8 +12,10 @@ function computerPlay()
 let playerSelection;
 let computerSelection;
 
+//singleRound == playRound
 function singleRound(playerSelection, computerSelection)
 {
+    //1 is rock, 2 is paper, 3 is scissors
     if (playerSelection == 1 && computerSelection == 'Scissors') return "Computer selected scissors\nPlayer wins - rock beats scissors";
     else if (playerSelection == 1 && computerSelection == 'Paper') return "Computer selected Paper\nPlayer loses - paper beats rock";
     else if (playerSelection == 1 && computerSelection == 'Rock') return "Computer selected rock\nDraw";
@@ -25,3 +27,23 @@ function singleRound(playerSelection, computerSelection)
     else if (playerSelection == 3 && computerSelection == 'Paper') return "Computer selected paper\nPlayer wins - scissors beat paper";
     else return "error";
 }
+
+const userChoice = document.querySelector('.user-choice');
+const rock = document.querySelector('#rock');
+const paper = document.querySelector('#paper');
+const scissors = document.querySelector('#scissors');
+
+rock.addEventListener('click', () => {
+    playerSelection = 1;
+    console.log(singleRound(playerSelection, computerPlay()));
+});
+
+paper.addEventListener('click', () => {
+    playerSelection = 2;
+    console.log(singleRound(playerSelection, computerPlay()));
+});
+
+scissors.addEventListener('click', () => {
+    playerSelection = 3;
+    console.log(singleRound(playerSelection, computerPlay()));
+})
