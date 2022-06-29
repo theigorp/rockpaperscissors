@@ -33,17 +33,22 @@ const rock = document.querySelector('#rock');
 const paper = document.querySelector('#paper');
 const scissors = document.querySelector('#scissors');
 
+const results = document.querySelector('.results');
+const finalResult = document.createElement('p');
+results.appendChild(finalResult);
+
 rock.addEventListener('click', () => {
     playerSelection = 1;
-    console.log(singleRound(playerSelection, computerPlay()));
+    finalResult.textContent = singleRound(playerSelection, computerPlay());
 });
 
 paper.addEventListener('click', () => {
     playerSelection = 2;
-    console.log(singleRound(playerSelection, computerPlay()));
+    finalResult.textContent = singleRound(playerSelection, computerPlay());
 });
 
 scissors.addEventListener('click', () => {
     playerSelection = 3;
-    console.log(singleRound(playerSelection, computerPlay()));
-})
+
+    finalResult.textContent = singleRound(playerSelection, computerPlay());
+});
