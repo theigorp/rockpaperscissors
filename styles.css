@@ -67,10 +67,33 @@ img {
     font-size: 50px;
 }
 
-.active1 {
-    background-color: red;
+button {
+    height: 50px ;
+    width: 175px;
+    font-size: 22px;
+    border-radius: 10px;
+    border: none;
 }
 
-.active2 {
-    background-color: blue;
+button:hover {
+    background-color: rgb(224, 224, 224);;
+}
+
+.winner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: 30%;
+}
+
+.winner-para {
+    color: white;
+    font-size: 18px;
+}
+
+#winner-profile {
+    max-width: 125px;
 }

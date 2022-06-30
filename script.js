@@ -39,6 +39,7 @@ const computerScissors = document.querySelector('.computer-scissors');
 const playerScoreElement = document.querySelector('.player-score');
 const computerScoreElement = document.querySelector('.computer-score');
 
+
 let playerScore = 0;
 let computerScore = 0;
 
@@ -70,6 +71,8 @@ playerRock.addEventListener('click', () => {
             playerRock.style.backgroundColor = 'blue';
             computerRock.style.backgroundColor = 'blue';
     }
+
+    checkScore(playerScore, computerScore);
 });
 
 playerPaper.addEventListener('click', () => {
@@ -100,6 +103,8 @@ playerPaper.addEventListener('click', () => {
             playerPaper.style.backgroundColor = 'blue';
             computerPaper.style.backgroundColor = 'blue';
     }
+
+    checkScore(playerScore, computerScore);
 });
 
 playerScissors.addEventListener('click', () => {
@@ -130,4 +135,67 @@ playerScissors.addEventListener('click', () => {
             playerScissors.style.backgroundColor = 'blue';
             computerScissors.style.backgroundColor = 'blue';
     }
+
+    checkScore(playerScore, computerScore);
 });
+
+function newGame()
+{
+    playerPaper.style.backgroundColor = '';
+    playerRock.style.backgroundColor = '';
+    playerScissors.style.backgroundColor = '';
+    computerRock.style.backgroundColor = '';
+    computerScissors.style.backgroundColor = '';
+    computerPaper.style.backgroundColor = '';
+    playerScoreElement.textContent = `SCORE: 0`;
+    computerScoreElement.textContent = `SCORE: 0`;
+    playerScore = 0;
+    computerScore = 0;
+}
+
+function checkScore(playerScore, computerScore)
+{
+    if(computerScore == 5 || playerScore == 5)
+    {
+        //hides the game
+        document.querySelector('.player').style.visibility = "hidden";
+        document.querySelector('.computer').style.visibility = "hidden";
+
+        const body = document.querySelector('body');
+        const button = document.createElement('button');
+        const container = document.createElement('div');
+        const profile = document.createElement('img');
+        const winner = document.createElement('p');
+
+        body.appendChild(container);
+        container.classList.add('winner');
+
+        container.appendChild(profile);
+        profile.setAttribute('id', 'winner-profile');
+        container.appendChild(winner);
+        winner.classList.add('winner-para');
+
+        if(playerScore > computerScore)
+        {
+            profile.setAttribute('src', 'https://cdn1.iconfinder.com/data/icons/soccer-54/64/1-player-512.png');
+            winner.textContent = `PLAYER WINS ${playerScore}:${computerScore}!`;
+        }
+        else if(computerScore > playerScore)
+        {
+            profile.setAttribute('src', 'https://cdn-icons-png.flaticon.com/512/1114/1114521.png?w=360');
+            winner.textContent = `ROBOT WINS ${playerScore}:${computerScore}!`;
+        }
+
+        container.appendChild(button);
+        button.textContent = 'PLAY AGAIN?';
+
+        button.addEventListener('click', () => {
+            body.removeChild(container);
+
+            document.querySelector('.player').style.visibility = "visible";
+            document.querySelector('.computer').style.visibility = "visible";
+
+            newGame();
+        });
+    }
+}
