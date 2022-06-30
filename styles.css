@@ -66,3 +66,11 @@ img {
 #name {
     font-size: 50px;
 }
+
+.active1 {
+    background-color: red;
+}
+
+.active2 {
+    background-color: blue;
+}
