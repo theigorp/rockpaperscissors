@@ -1,35 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,600;1,700&family=Roboto:wght@300;400;500;700;900&display=swap');
+
 body {
     margin: 0;
     padding: 0;
-    padding: 0 300px;
+    background-color: #3F4045;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.player, .computer {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #355691;
+    border-radius: 15px;
+}
+
+.rock, .paper, .scissors {
+    padding: 20px;
+    background-color: white;
+    box-shadow: 5px 5px black;
+    transition: all 0.02s ease-in;
+}
+
+.rock:hover, .paper:hover, .scissors:hover {
+    background-color: rgb(224, 224, 224);
+    transform: translate(1px, 2px);
+}
+
+.rock, .paper {
+    margin-right: 20px;
+}
+
+.stats {
+    display: flex;
+    gap: 10px;
+    margin-left: -10px;
+}
+
+#profile {
+    max-width: 50px;
 }
 
 .score {
-    font-size: 60px;
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid black;
-    padding: 10px 160px;
-}
-
-.match-info {
-    font-size: 45px;
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid black;
-    padding: 10px 120px;
-}
-
-.game {
-    display: flex;
-}
-
-.user-choice {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
+    font-size: 20px;
+    margin-top: 15px;
 }
 
 img {
-    max-height: 150px;
+    max-width: 125px;
+}
+
+.options {
+    display: flex;
+}
+
+#name {
+    font-size: 50px;
 }

@@ -9,40 +9,45 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="score">
-        <span class="player-score">0</span>
-        <span class="dot">:</span>
-        <span class="computer-score">0</span>
-    </div>
-    <div class="match-info">
-        <span>YOU</span>
-        <!-- <span>VS.</span> -->
-        <span>COMPUTER</span>
-    </div>
-    <div class="game">
-        <div class="user-choice">
-            <button id="rock">ROCK</button>
-            <button id="paper">PAPER</button>
-            <button id="scissors">SCISSORS</button>
-        </div>
-        <div class="computer-choice">
-            <img src="https://c.tenor.com/GXMu0NRMHQgAAAAM/question-mark.gif" alt="">
-        </div>
-    </div>
-    <div class="results">
-        
-    </div>
-
-
     <div class="player">
-        <span>PLAYER</span>
-        <div class="player-stats">
-            <img src="https://cdn1.iconfinder.com/data/icons/soccer-54/64/1-player-512.png" alt="">
+        <span id="name">PLAYER</span>
+        <div class="stats jedan">
+            <img id="profile"src="https://cdn1.iconfinder.com/data/icons/soccer-54/64/1-player-512.png" alt="">
             <span class="score">SCORE: 0</span>
+        </div>
+        <div class="options">
+            <div class="rock">
+                <!-- <p>ROCK</p> -->
+                <img src="assets/rock.png" alt="">
+            </div>
+            <div class="paper">
+                <!-- <p>PAPER</p> -->
+                <img src="assets/paper.png" alt="">
+            </div>
+            <div class="scissors">
+                <img src="assets/scissors.png" alt="">
+            </div>
         </div>
     </div>
     <div class="computer">
-
+        <span id="name">ROBOT</span>
+        <div class="stats">
+            <img id="profile" src="https://cdn-icons-png.flaticon.com/512/1114/1114521.png?w=360" alt="">
+            <span class="score">SCORE: 0</span>
+        </div>
+        <div class="options">
+            <div class="rock">
+                <!-- <p>ROCK</p> -->
+                <img src="assets/rock.png" alt="">
+            </div>
+            <div class="paper">
+                <!-- <p>PAPER</p> -->
+                <img src="assets/paper.png" alt="">
+            </div>
+            <div class="scissors">
+                <img src="assets/scissors.png" alt="">
+            </div>
+        </div>
     </div>
 </body>
 </html>
